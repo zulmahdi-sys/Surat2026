@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "aksara-persuratan-digital",
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
