@@ -79,12 +79,13 @@ function doGet(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
-  return HtmlService.createTemplateFromFile("Index")
+  var output = HtmlService.createTemplateFromFile("Index")
     .evaluate()
     .setTitle("Sistem Persuratan Digital - Aksara Digital")
     .setFaviconUrl("https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x16.png")
-    .addMetaTag("viewport", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
-    .setXframeOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  output.addMetaTag("viewport", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+  return output;
 }
 
 /**
